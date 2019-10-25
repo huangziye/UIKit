@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f6f6f6"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <FrameLayout
+        android:id="@+id/switchLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMessage"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="1dp">
+
+        <ImageView
+            android:id="@+id/btnAudioMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/msg_btn_bottom_audio_selector"
+            android:clickable="true"
+            android:contentDescription=""
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/btnTextMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/msg_btn_bottom_keyboard_selector"
+            android:contentDescription=""
+            android:scaleType="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/audioTextSwitchLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/switchLayout"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/emoji_button"
+        android:layout_toRightOf="@+id/switchLayout">
+
+        <TextView
+            android:id="@+id/btnAudioRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="72dp"
+            android:layout_gravity="center"
+            android:background="@drawable/msg_btn_bottom_audio_record_shape"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/record_audio"
+            android:textColor="@color/color_333333"
+            android:textSize="16dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/emoji_button"
+        android:layout_toRightOf="@+id/switchLayout"
+        android:autoLink="web|email|phone"
+        android:background="@drawable/msg_input_edittext_box_shape"
+        android:maxHeight="72dp"
+        android:maxLines="4"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/emoji_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/audioTextSwitchLayout"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toLeftOf="@+id/sendLayout"
+        android:background="@drawable/msg_btn_bottom_emoji_selector"
+        android:clickable="true"
+        android:contentDescription=""
+        android:scaleType="center" />
+
+    <FrameLayout
+        android:id="@+id/sendLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/audioTextSwitchLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="1dp">
+
+        <ImageView
+            android:id="@+id/btnMoreFuntionInText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/msg_btn_bottom_add_selector"
+            android:clickable="true"
+            android:contentDescription=""
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/btnSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/msg_btn_bottom_send_selector"
+            android:clickable="true"
+            android:contentDescription=""
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </FrameLayout>
+</RelativeLayout>
